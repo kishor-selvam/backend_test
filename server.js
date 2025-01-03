@@ -11,6 +11,11 @@ const posts = [
   { id: 3, title: "Post 3", content: "This is the content of post 3." },
 ];
 
+app.get("/", (req, res) => {
+  res.json({
+    welcome: "Hello World!!",
+  });
+});
 app.get("/post", (req, res) => {
   res.json(posts);
 });
